@@ -33,15 +33,15 @@ function Game(){
     const [tableList, setTableList] = useState({
         brian:[
             <h1>Brian</h1>,
-            <img src="./public/brian.png"/>
+            <img src="/brian.png"/>
         ],
         spike:[
             <h1>Spike</h1>,
-            <img src="./public/spike.png"/>
+            <img src="/spike.png"/>
         ],
         ash: [
             <h1>Ash</h1>,
-            <img src="./public/ash.png"/>
+            <img src="/ash.png"/>
         ]
     })
     const [showTable, setSHowTable] = useState(false)
@@ -217,22 +217,22 @@ function Game(){
             <div className='navItems'>
                 <div className={brianClass} style={{flex:'1', display:'grid', gridTemplateColumns:'30px 1fr', cursor:'pointer', padding:'8px'}}>
                   {/* <img src={fireMario} alt="" style={{width:'100%', height:'100%'}}/> */}
-                  <img src="./public/brian.png"/>
+                  <img src="/brian.png"/>
                   <div>Brian</div>
                 </div>
                 <div className={spikeClass} style={{flex:'1', display:'grid', gridTemplateColumns:'30px 1fr',cursor:'pointer', padding:'8px'}}>
                   {/* <img src={ghost} alt="" style={{width:'100%', height:'100%'}}/> */}
-                  <img src="./public/spike.png"/>
+                  <img src="/spike.png"/>
                   <div>Spike</div>
                 </div>
                 <div className={ashClass} style={{flex:'1', display:'grid', gridTemplateColumns:'30px 1fr', cursor:'pointer', padding:'8px'}}>
-                  <img src="./public/ash.png"/>
+                  <img src="/ash.png"/>
                   <div>Ash</div>
                 </div>
             </div>
         </nav>
         <div className="game" >
-            <img src="./public/game.jpg" alt="" onClick={(e)=>checkIt(e)}/>
+            <img src="/game.jpg" alt="" onClick={(e)=>checkIt(e)}/>
             {showTable==true&&<div className="thetable" style={{left:tableX, top:tableY}}>{lista}</div>}
             {showTable==true&&<div className="area" style={{backgroundColor:"black",opacity:"0.6",position:"absolute", border:'1px dotted white', left:clickedX-25, top:clickedY-25, height:"50px", width:"50px"}}></div>}
             {correct==true&&<div className="message correct">That was correct!!</div>}
