@@ -128,7 +128,7 @@ function Mario() {
   async function checkChoice(name){
 
     if (name == 'mario'){
-      const rawAnswer = await fetch(`http://localhost:8000/checkanswer/mario`, {
+      const rawAnswer = await fetch(`https://find-waldo-backend.onrender.com/checkanswer/mario`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body:JSON.stringify(
