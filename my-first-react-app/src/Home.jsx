@@ -24,7 +24,7 @@ function Home(){
                             </div>
                             <div className="aGame">
                                 <div>
-                                    <img src="./public/game.jpg" style={{height:"100%", width:"100%"}}/>
+                                    <img src="/game.jpg" style={{height:"100%", width:"100%"}}/>
                                 </div>
                                 <div>
                                     <h4>Games</h4>
@@ -37,7 +37,7 @@ function Home(){
                             </div>
                             <div className="aGame">
                                 <div>
-                                    <img src="./public/wally.jpg" style={{height:"100%", width:"100%"}}/>
+                                    <img src="/wally.jpg" style={{height:"100%", width:"100%"}}/>
                                 </div>
                                 <div>
                                     <h4>Wally</h4>

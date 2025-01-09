@@ -31,7 +31,7 @@ function Wally(){
     const [tableList, setTableList] = useState({
         Waldo:[
             <h1>Waldo</h1>,
-            <img src="./public/waldo.png"/>
+            <img src="/waldo.png"/>
         ]
     })
     const [showTable, setSHowTable] = useState(false)
@@ -131,13 +131,13 @@ function Wally(){
             <div style={{width:'120px'}}>Time: {time}</div>
             <div className='navItems'>
                 <div className={wallyClass} style={{flex:'1', display:'grid', gridTemplateColumns:'30px 1fr', cursor:'pointer', padding:'8px'}}>
-                  <img src="./public/waldo.png"/>
+                  <img src="/waldo.png"/>
                   <div>Waldo</div>
                 </div>
             </div>
         </nav>
         <div className="game" >
-            <img src="./public/wally.jpg" alt="" onClick={(e)=>checkIt(e)} style={{width:'100%'}}/>
+            <img src="/wally.jpg" alt="" onClick={(e)=>checkIt(e)} style={{width:'100%'}}/>
             {showTable==true&&<div className="thetable" style={{left:tableX, top:tableY}}>{lista}</div>}
             {showTable==true&&<div className="area" style={{backgroundColor:"black",opacity:"0.6",position:"absolute", border:'1px dotted white', left:clickedX-25, top:clickedY-25, height:"50px", width:"50px"}}></div>}
             {correct==true&&<div className="message correct">That was correct!!</div>}

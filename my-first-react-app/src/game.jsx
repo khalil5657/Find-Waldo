@@ -232,7 +232,7 @@ function Game(){
             </div>
         </nav>
         <div className="game" >
-            <img src="./public/game.jpg" alt="" onClick={(e)=>checkIt(e)}/>
+            <img src="/game.jpg" alt="" onClick={(e)=>checkIt(e)}/>
             {showTable==true&&<div className="thetable" style={{left:tableX, top:tableY}}>{lista}</div>}
             {showTable==true&&<div className="area" style={{backgroundColor:"black",opacity:"0.6",position:"absolute", border:'1px dotted white', left:clickedX-25, top:clickedY-25, height:"50px", width:"50px"}}></div>}
             {correct==true&&<div className="message correct">That was correct!!</div>}
