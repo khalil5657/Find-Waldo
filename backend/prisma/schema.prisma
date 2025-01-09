@@ -13,7 +13,21 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Leaderboard {
+model Mario {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  username     String   @db.VarChar(255)
+  time Int 
+}
+
+model Wally {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  username     String   @db.VarChar(255)
+  time Int 
+}
+
+model Game {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
   username     String   @db.VarChar(255)

@@ -70,6 +70,7 @@ button:focus-visible {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: 'Courier New', Courier, monospace;
  }
 
  .test{
@@ -86,7 +87,13 @@ button:focus-visible {
 .game{
   margin-top: 80px;
   margin-bottom: 32px; 
+  cursor: crosshair;
+  /* width: 100vw; */
 }
+/* .game img{ */
+  /* width: 100vw; */
+/* } */
+
 nav{
   z-index: 50;
  position: fixed;
@@ -162,4 +169,139 @@ footer{
   position: fixed;
   left: 35%;
   top: 200px;
+}
+.thetable{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid black;
+  background-color: white;
+  position: absolute;
+}
+.thetable div{
+  padding: 5px;
+}
+.thetable div:hover{
+  background-color: rgb(222, 222, 222);
+}
+.choices div{
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  width: 100px;
+  cursor: pointer;
+  align-items: center;
+  gap: 5px;
+}
+.choices img{
+  width: 100%;
+  height: 100%;
+}
+.navItems img{
+  height: 100%;
+  width: 100%;
+}
+.normal, .answered{
+  align-items: center;
+  gap: 10px;
+}
+.answered{
+  text-decoration: line-through;
+  color: rgb(227, 227, 227);
+}
+.home{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.firstpart{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 40, 40);
+  color: white;
+  padding: 40px;
+  height: 100px;
+  
+}
+.secondpart{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(52, 52, 255);
+  color: white;
+  width: 100%;
+  
+}
+.games{
+  width: 65%;
+  background-color: white;
+  border-radius: 10px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.games .aGame{
+  width: 25%;
+  height: 80%;
+  background-color: rgb(201, 201, 201);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70% 30%;
+  row-gap: 5px;
+}
+.aGame h4{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  color: black;
+  padding-bottom: 5px;
+}
+.aGame .Link{
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.aGame .Link:hover{
+  background-color: rgb(221, 221, 221);
+}
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+.dark{
+  background-color: rgb(141, 141, 141);
+}
+.light{
+  background-color: rgb(215, 215, 215);
+
+}
+.boardlist{
+  width: 60%;
+  /* margin-left: 20%; */
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1.8px 1.8px 1.8px gray;
+}
+
+.boardlist div{
+  padding: 10px;
+}
+.board{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  background-color: #3AAFA9;
+  /* width: 100vh; */
+  height: 100vh;
 }

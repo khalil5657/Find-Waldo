@@ -20,25 +20,64 @@ app.get("/", (req, res)=>{
     res.status(200).json({message:"success"})
 })
 app.post("/record", async(req, res)=>{
-    console.log("sent")
-    await prisma.leaderboard.create({
-        data:{
-            username:req.body.username,
-            time:req.body.time
-        }
-    })
-    res.status(200).json({message:"success"})
+  
+  if (req.body.game=="mario"){
+    await prisma.mario.create({
+            data:{
+                username:req.body.username,
+                time:req.body.time
+            }
+        })
+        res.status(200).json({message:"success"})
+  }else if (req.body.game=="wally"){
+    await prisma.wally.create({
+            data:{
+                username:req.body.username,
+                time:req.body.time
+            }
+        })
+        res.status(200).json({message:"success"})
+  }else{
+    await prisma.game.create({
+            data:{
+                username:req.body.username,
+                time:req.body.time
+            }
+        })
+        res.status(200).json({message:"success"})
+  }
+    
 })
-app.get("/board", async(req, res)=>{
-    const data = await prisma.leaderboard.findMany({
+app.get("/board/:game", async(req, res)=>{
+  if (req.params.game == "mario"){
+    const data = await prisma.mario.findMany({
+          orderBy: [
+      {
+        time: 'asc'
+      },
+    ],
+      })
+      res.status(200).json({data:data})
+  }else if (req.params.game == "wally"){
+    const data = await prisma.wally.findMany({
          orderBy: [
-    {
-      time: 'asc'
-    },
-  ],
-    })
-    console.log(data)
-    res.status(200).json({data:data})
+      {
+        time: 'asc'
+      },
+    ],
+      })
+      res.status(200).json({data:data})
+  }else{
+    const data = await prisma.game.findMany({
+          orderBy: [
+      {
+        time: 'asc'
+      },
+    ],
+      })
+      res.status(200).json({data:data})
+  }
+    
 })
 app.post("/checkanswer/:id", (req, res)=>{
     console.log(req.params.id)
