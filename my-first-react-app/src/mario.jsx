@@ -146,7 +146,7 @@ function Mario() {
     }
 
     if (name == 'boo'){
-      const rawAnswer = await fetch(`http://localhost:8000/checkanswer/boo`, {
+      const rawAnswer = await fetch(`https://find-waldo-backend.onrender.com/checkanswer/boo`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body:JSON.stringify(
@@ -163,7 +163,7 @@ function Mario() {
       }
     }
     if (name == 'waluiji'){
-      const rawAnswer = await fetch(`http://localhost:8000/checkanswer/waluiji`, {
+      const rawAnswer = await fetch(`https://find-waldo-backend.onrender.com/checkanswer/waluiji`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body:JSON.stringify(
@@ -207,7 +207,7 @@ function Mario() {
       if (username ==''){
         return
       }
-      const raw = await fetch("http://localhost:8000/record", {
+      const raw = await fetch("https://find-waldo-backend.onrender.com/record", {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(
