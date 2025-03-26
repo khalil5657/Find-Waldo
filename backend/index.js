@@ -19,6 +19,16 @@ app.get("/", (req, res)=>{
     console.log("marhaba")
     res.status(200).json({message:"success"})
 })
+
+app.get("/sendtest", async(req, res)=>{
+    await prisma.test.create({
+        data:{
+            content:"ktfcsv54464322"
+        }
+    })
+    res.send("yyyyy")
+})
+
 app.post("/record", async(req, res)=>{
   
   if (req.body.game=="mario"){
