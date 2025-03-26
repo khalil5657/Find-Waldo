@@ -199,7 +199,7 @@ function Game(){
         setUsername(value)
     }
     async function submitIt(){
-            const raw = await fetch("http://localhost:8000/record", {
+            const raw = await fetch("https://find-waldo-backend.onrender.com/record", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(

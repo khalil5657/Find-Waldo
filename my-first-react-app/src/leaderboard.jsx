@@ -9,7 +9,7 @@ function Board(){
     useEffect(()=>{
         (
             async ()=>{
-                const rawData = await fetch("http://localhost:8000/board/"+state.game, {
+                const rawData = await fetch("https://find-waldo-backend.onrender.com/board/"+state.game, {
                     method:"GET",
                     headers: { 'Content-Type': 'application/json' },
                 })

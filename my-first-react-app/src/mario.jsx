@@ -146,7 +146,7 @@ function Mario() {
     }
 
     if (name == 'boo'){
-      const rawAnswer = await fetch(`http://localhost:8000/checkanswer/boo`, {
+      const rawAnswer = await fetch(`https://find-waldo-backend.onrender.com/checkanswer/boo`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body:JSON.stringify(
