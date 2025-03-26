@@ -27,7 +27,7 @@ app.get("/sendtest", async(req, res)=>{
         }
     })
     const allof = await prisma.test.findMany()
-    res.send("yyyyy",allof )
+    res.send(allof )
 })
 
 app.post("/record", async(req, res)=>{
