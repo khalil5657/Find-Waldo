@@ -3,7 +3,9 @@ import { Link } from "react-router-dom"
 
 
 function Home(){
-    return <div className="home">
+    return <div className="content">
+    
+            <div className="home">
                 <div className="firstpart">
                     <h1>Welcome to waldo Hunt</h1>
                 </div>
@@ -12,7 +14,7 @@ function Home(){
                         <div className="games">
                             <div className="aGame" >
                                 <div>
-                                    <img style={{width:"100%", height:"100%"}} src="https://firebasestorage.googleapis.com/v0/b/wheres-waldo-74fe1.appspot.com/o/game-2%2Fbackground%2Fsuper-mario-bros.webp?alt=media&amp;token=4e5d2551-7f70-4dad-a59b-b6bbdf40ecda" alt=""/>                                
+                                    <img style={{height:"100%", width:"100%"}}  src="https://firebasestorage.googleapis.com/v0/b/wheres-waldo-74fe1.appspot.com/o/game-2%2Fbackground%2Fsuper-mario-bros.webp?alt=media&amp;token=4e5d2551-7f70-4dad-a59b-b6bbdf40ecda" alt=""/>                                
                                 </div>
                                 <div>
                                     <h4>Mario</h4>
@@ -49,8 +51,8 @@ function Home(){
                             </div>
                         </div>
                     </div>           
-                
             </div>
+        </div>
 }   
 
 export default Home
