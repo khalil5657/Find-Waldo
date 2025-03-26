@@ -10,9 +10,9 @@ const prisma = new PrismaClient()
 app.use(express.json())
 var cors = require('cors');
 app.use(cors({
-    origin: ["https://wallygame.netlify.app"],
+    origin: "*",
     methods : ["PUT", "DELETE", "POST", "GET"],
-    credentials: true
+    // credentials: true
 }))
 
 app.get("/", (req, res)=>{
